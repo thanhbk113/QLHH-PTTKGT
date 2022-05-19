@@ -1,0 +1,81 @@
+.productDetail {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    position: relative;
+    .menuOption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .sortContainer {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+            border: 1px solid gray;
+            width: 16rem;
+            height: 2.5rem;
+            padding: 0 1rem 0;
+            justify-content: space-between;
+        }
+    }
+    
+    .cardContainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        position: relative;
+        
+        .MuiFab-root {
+            background-color: rgb(122, 122, 242);
+            position: absolute;
+            bottom: 4rem;
+            right: 1rem;
+        }
+
+        .MuiCard-root {
+            width: 40rem;
+            height: 40rem;
+            margin: 1rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #faf9fa;
+            position: relative;
+            border-radius: 1rem;
+       
+            h4 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -1.8rem;
+                left: 0;
+                background-color: rgb(237, 237, 56);
+                width: 6rem;
+                height: 4rem;
+                color: white;
+                font-size: 1.4rem;
+            }
+            img {
+                width: 16rem;
+                height: 18rem;
+            }
+
+            .MuiCardContent-root {
+                width: 100%;
+                .info {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+
+}

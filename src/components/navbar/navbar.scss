@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 15px;
+    .actionMain {
+        display: flex;
+        align-items: center;
+        h2 {
+            margin-left: 1rem;
+            cursor: pointer;
+            font-weight: 300;
+        }
+    }
+    
+    .iconLeft {
+        display: flex;
+        align-items: center;
+        .icon {
+            cursor: pointer;
+        }
+        
+    }
+}

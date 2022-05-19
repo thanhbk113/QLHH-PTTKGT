@@ -1,0 +1,57 @@
+.depot {
+    
+    .bottom {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+.cardContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    .MuiCard-root {
+        width: 40rem;
+        height: 40rem;
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #faf9fa;
+        position: relative;
+        border-radius: 1rem;
+   
+        h4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -1.8rem;
+            left: 0;
+            background-color: rgb(237, 237, 56);
+            width: 6rem;
+            height: 4rem;
+            color: white;
+            font-size: 1.4rem;
+        }
+        img {
+            width: 16rem;
+            height: 18rem;
+        }
+
+        .MuiCardContent-root {
+            width: 100%;
+            .info {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+        }
+    }
+  }
+
+}
