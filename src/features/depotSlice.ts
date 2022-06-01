@@ -15,26 +15,29 @@ const depotSlice = createSlice({
   name: "depot",
   reducers: {
     addToDepot: (state, action: PayloadAction<product>) => {
-      let check = false;
+      let check = false; // 1
       state.depotTotal.forEach((item) => {
+        // n
         if (item.id === action.payload.id) {
-          check = true;
-          item.quantity += action.payload.quantity;
-          return;
+          // 1
+          check = true; // 1
+          item.quantity += action.payload.quantity; // 1
+          return; // 1
         }
       });
       if (!check) {
-        state.depotTotal.push(action.payload);
+        // 1
+        state.depotTotal.push(action.payload); // 1
       }
-    },
+    }, // => 1+n+1+1+1+1+1
     addDepotHistory: (state, action: PayloadAction<totalProducts>) => {
-      state.depotTotal = [];
-      state.depotHistory.push(action.payload);
-    },
+      state.depotTotal = []; // 1
+      state.depotHistory.push(action.payload); // 1
+    }, // => 1+1
     resetDepotHistory: (state) => {
-      state.depotHistory = [];
-    },
-  },
+      state.depotHistory = []; // 1
+    }, // =>1
+  }, // => 1+1
 });
 
 export const { addToDepot, addDepotHistory, resetDepotHistory } =

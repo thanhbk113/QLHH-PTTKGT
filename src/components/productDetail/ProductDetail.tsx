@@ -1,4 +1,4 @@
-import { Add, ArrowDropDownCircle, Delete } from "@mui/icons-material";
+import { Add, ArrowDropDownCircle, Delete, Search } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -136,12 +136,13 @@ const ProductDetail = () => {
                 variant="contained"
                 onClick={() => {
                   if (window.confirm("bạn có chắc chắn muốn xóa")) {
+                    // 1
                     let t = products.productSp.filter(
-                      (item) => item.id !== d.id
+                      (item) => item.id !== d.id // n
                     );
-                    dispath(receiveProducts(t));
+                    dispath(receiveProducts(t)); // 1
                     toast.success(`Xóa thành công Smart Watch ${d.id}`);
-                  }
+                  } // => n+1
                 }}
               >
                 <Delete />
@@ -179,8 +180,8 @@ const ProductDetail = () => {
                       toast.error("Vui lòng nhập số lượng hợp lệ");
                       return;
                     }
-                    dispath(addToDepot({ ...d, quantity: ipDepot }));
                     dispath(decreaseQuantity({ id: d.id, quantity: ipDepot }));
+                    dispath(addToDepot({ ...d, quantity: ipDepot }));
                     toast.success("Thêm vào kho thành công");
                   }}
                 >

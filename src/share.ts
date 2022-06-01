@@ -91,7 +91,7 @@ export interface totalProducts {
 export const Input = styled(InputBase)`
   margin-bottom: 1rem;
   border: none;
-  border-bottom: 1px solid #03a1fc;
+  border: 1px solid #03a1fc;
   outline: none;
 `;
 
